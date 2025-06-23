@@ -38,6 +38,23 @@ export default class ActiveProjectService {
         }
     }
 
+    public deleteEditor(editor: Editor) {
+        editor = getTrimmedEditor(editor);
+        if (!this.hasEditor(editor)) {
+            return;
+        }
+        const idx = this._activeEditors.findIndex(e => e.fileName === editor.fileName);
+        this._activeEditors.splice(idx, 1);
+        if (this._previousEditor === editor) {
+            this._previousEditor = undefined;
+        }
+    }
+
+    public clearEditors() {
+        this._activeEditors.splice(0, this._activeEditors.length);
+        this._previousEditor = undefined;
+    }
+
     public getEditor(id: number) {
         return this._activeEditors[id - 1];
     }
@@ -53,10 +70,16 @@ export default class ActiveProjectService {
         const nextIndex = this.findPreviousNonFillerEditorIndex(currentEditorIndex - 1);
         return nextIndex !== -1
             ? nextIndex
-            : this.findPreviousNonFillerEditorIndex(this._activeEditors.length - 1, currentEditorIndex + 1);
+            : this.findPreviousNonFillerEditorIndex(
+                  this._activeEditors.length - 1,
+                  currentEditorIndex + 1
+              );
     }
 
-    private findNextNonFillerEditorIndex(fromIndex: number, toIndex: number = this._activeEditors.length) {
+    private findNextNonFillerEditorIndex(
+        fromIndex: number,
+        toIndex: number = this._activeEditors.length
+    ) {
         for (let i = fromIndex; i < toIndex; i++) {
             if (!this.isFillerEditor(this._activeEditors[i])) {
                 return i;

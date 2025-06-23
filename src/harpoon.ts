@@ -9,6 +9,8 @@ import createEditEditorsCommand from "./commands/edit-editors";
 import createEditorQuickPickCommand from "./commands/editor-quick-pick";
 import createGotoPreviousHarpoonEditorCommand from "./commands/goto-previous-harpoon-editor";
 import createNavigateEditorCommand from "./commands/navigate-editor";
+import createDeleteEditorCommand from "./commands/delete-editor";
+import createClearEditorsCommand from "./commands/clear-editor";
 
 export type State = "workspaceState" | "globalState";
 
@@ -50,6 +52,8 @@ function registerCommands(
 
     const key = state === "globalState" ? "Global" : "";
     const addEditor = createAddEditorCommand(activeProjectService, workspaceService);
+    const deleteEditor = createDeleteEditorCommand(activeProjectService, workspaceService);
+    const clearEditors = createClearEditorsCommand(activeProjectService, workspaceService);
 
     commandFactory.registerCommand(`add${key}Editor`, addEditor());
     commandFactory.registerCommand(
@@ -90,4 +94,6 @@ function registerCommands(
         `navigate${key}PreviousEditor`,
         createNavigateEditorCommand(activeProjectService, workspaceService, "navigatePrevious")
     );
+    commandFactory.registerCommand(`delete${key}Editor`, deleteEditor());
+    commandFactory.registerCommand(`clear${key}Editors`, clearEditors());
 }

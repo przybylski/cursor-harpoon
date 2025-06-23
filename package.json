@@ -23,6 +23,9 @@
     "categories": [
         "Other"
     ],
+    "activationEvents": [
+        "*"
+    ],
     "main": "./dist/harpoon.js",
     "contributes": {
         "commands": [
@@ -217,6 +220,22 @@
             {
                 "command": "vscode-harpoon.gotoPreviousGlobalHarpoonEditor",
                 "title": "VSCode Harpoon: Go to previous global harpoon editor"
+            },
+            {
+                "command": "vscode-harpoon.deleteEditor",
+                "title": "VSCode Harpoon: Delete Editor"
+            },
+            {
+                "command": "vscode-harpoon.deleteGlobalEditor",
+                "title": "VSCode Harpoon: Delete Global Editor"
+            },
+            {
+                "command": "vscode-harpoon.clearEditors",
+                "title": "VSCode Harpoon: Clear All Editors"
+            },
+            {
+                "command": "vscode-harpoon.clearGlobalEditors",
+                "title": "VSCode Harpoon: Clear All Global Editors"
             }
         ]
     },
@@ -251,7 +270,7 @@
         "prettier": "^2.5.1",
         "ts-loader": "^9.2.6",
         "typescript": "^4.5.5",
-        "@vscode/vsce": "^2.7.0",
+        "@vscode/vsce": "^2.18.0",
         "webpack": "^5.69.1",
         "webpack-cli": "^4.9.2"
     },
