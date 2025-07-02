@@ -6,21 +6,21 @@ suite("Harpoon runs correctly", () => {
     test("can add files and go to them", async function () {
         this.timeout(10000);
         await openFile("package.json");
-        await vscode.commands.executeCommand("vscode-harpoon.addEditor");
+        await vscode.commands.executeCommand("cursor-harpoon.addEditor");
 
         await openFile("README.md");
-        await vscode.commands.executeCommand("vscode-harpoon.addEditor");
+        await vscode.commands.executeCommand("cursor-harpoon.addEditor");
 
-        await vscode.commands.executeCommand("vscode-harpoon.gotoEditor1");
+        await vscode.commands.executeCommand("cursor-harpoon.gotoEditor1");
         isFileName("package.json");
 
-        await vscode.commands.executeCommand("vscode-harpoon.gotoEditor2");
+        await vscode.commands.executeCommand("cursor-harpoon.gotoEditor2");
         isFileName("README.md");
 
         // Global editor is not same as normal editor
-        await vscode.commands.executeCommand("vscode-harpoon.addGlobalEditor");
-        await vscode.commands.executeCommand("vscode-harpoon.gotoEditor1");
-        await vscode.commands.executeCommand("vscode-harpoon.gotoGlobalEditor1");
+        await vscode.commands.executeCommand("cursor-harpoon.addGlobalEditor");
+        await vscode.commands.executeCommand("cursor-harpoon.gotoEditor1");
+        await vscode.commands.executeCommand("cursor-harpoon.gotoGlobalEditor1");
         isFileName("README.md");
     });
 });

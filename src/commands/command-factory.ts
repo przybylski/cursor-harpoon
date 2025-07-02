@@ -59,7 +59,7 @@ export default class CommandFactory {
 
     public registerCommand(commandName: CommandName, command: () => any | Promise<any>) {
         const disposable = vscode.commands.registerCommand(
-            `vscode-harpoon.${commandName}`,
+            `cursor-harpoon.${commandName}`,
             async () => {
                 try {
                     return await Promise.resolve(command());

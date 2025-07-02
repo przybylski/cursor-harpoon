@@ -5,7 +5,9 @@
 VS Code Harpoon is inspired by The Primeagen's [Harpoon](https://github.com/ThePrimeagen/harpoon)
 plugin for neovim. It supports the basic use case of file navigation just like with Harpoon.
 
-![GitHub](https://img.shields.io/github/workflow/status/tobias-z/vscode-harpoon/validate/main)
+Forked from original work of ![Tobias Zimmermann](https://github.com/tobias-z/vscode-harpoon)
+
+![GitHub](https://img.shields.io/github/workflow/status/przybylski/vscode-harpoon/validate/main)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 </div>
@@ -23,48 +25,48 @@ You are then able to jump to `editor 1` or `editor 2` from anywhere in your work
 
 ### Available Commands
 
--   `VSCode Harpoon: Add Editor (vscode-harpoon.addEditor)` adds the current editor to your
+-   `VSCode Harpoon: Add Editor (cursor-harpoon.addEditor)` adds the current editor to your
     workspace
--   `VSCode Harpoon: Add Editor [1-9] (vscode-harpoon.addEditor[1-9])` adds the editor at the
+-   `VSCode Harpoon: Add Editor [1-9] (cursor-harpoon.addEditor[1-9])` adds the editor at the
     specified index
--   `VSCode Harpoon: Go to editor [1-9] (vscode-harpoon.gotoEditor[1-9])` Goes to workspace editor
+-   `VSCode Harpoon: Go to editor [1-9] (cursor-harpoon.gotoEditor[1-9])` Goes to workspace editor
     [1-9]
--   `VSCode Harpoon: Edit Editors (vscode-harpoon.editEditors)` Opens an editor for you do delete or
+-   `VSCode Harpoon: Edit Editors (cursor-harpoon.editEditors)` Opens an editor for you do delete or
     move added editors around.
--   `VSCode Harpoon: Editor Quick Pick (vscode-harpoon.editorQuickPick)` Opens a quick pick menu to
+-   `VSCode Harpoon: Editor Quick Pick (cursor-harpoon.editorQuickPick)` Opens a quick pick menu to
     pick between your current workspace editors
--   `VSCode Harpoon: Go to previous harpoon editor (vscode-harpoon.gotoPreviousHarpoonEditor)` Jumps
+-   `VSCode Harpoon: Go to previous harpoon editor (cursor-harpoon.gotoPreviousHarpoonEditor)` Jumps
     to the previous editor which was last jumped from using harpoon.
--   `VSCode Harpoon: Navigate Next Editor (vscode-harpoon.navigateNextEditor)` Jumps to the next
+-   `VSCode Harpoon: Navigate Next Editor (cursor-harpoon.navigateNextEditor)` Jumps to the next
     workspace editor.
--   `VSCode Harpoon: Navigate Previous Editor (vscode-harpoon.navigatePreviousEditor)` Jumps to the
+-   `VSCode Harpoon: Navigate Previous Editor (cursor-harpoon.navigatePreviousEditor)` Jumps to the
     previous workspace editor.
--   `VSCode Harpoon: Add Global Editor (vscode-harpoon.addGlobalEditor)` adds the current editor
+-   `VSCode Harpoon: Add Global Editor (cursor-harpoon.addGlobalEditor)` adds the current editor
     globally
--   `VSCode Harpoon: Add Global Editor [1-9] (vscode-harpoon.addGlobalEditor[1-9])` adds the editor
+-   `VSCode Harpoon: Add Global Editor [1-9] (cursor-harpoon.addGlobalEditor[1-9])` adds the editor
     globally at the specified index
--   `VSCode Harpoon: Go to global editor [1-9] (vscode-harpoon.gotoGlobalEditor[1-9])` Goes to
+-   `VSCode Harpoon: Go to global editor [1-9] (cursor-harpoon.gotoGlobalEditor[1-9])` Goes to
     global editor [1-9]
--   `VSCode Harpoon: Edit Global Editors (vscode-harpoon.editGlobalEditors)` Opens an editor for you
+-   `VSCode Harpoon: Edit Global Editors (cursor-harpoon.editGlobalEditors)` Opens an editor for you
     do delete or move added editors around.
--   `VSCode Harpoon: Editor Global Quick Pick (vscode-harpoon.editorGlobalQuickPick)` Opens a quick
+-   `VSCode Harpoon: Editor Global Quick Pick (cursor-harpoon.editorGlobalQuickPick)` Opens a quick
     pick menu to pick between your global editors
--   `VSCode Harpoon: Go to previous global harpoon editor (vscode-harpoon.gotoPreviousGlobalHarpoonEditor)`
+-   `VSCode Harpoon: Go to previous global harpoon editor (cursor-harpoon.gotoPreviousGlobalHarpoonEditor)`
     Jumps to the previous global editor which was last jumped from using harpoon.
--   `VSCode Harpoon: Navigate Next Global Editor (vscode-harpoon.navigateGlobalNextEditor)` Jumps to
+-   `VSCode Harpoon: Navigate Next Global Editor (cursor-harpoon.navigateGlobalNextEditor)` Jumps to
     the next global workspace editor.
--   `VSCode Harpoon: Navigate Previous Global Editor (vscode-harpoon.navigateGlobalPreviousEditor)`
+-   `VSCode Harpoon: Navigate Previous Global Editor (cursor-harpoon.navigateGlobalPreviousEditor)`
     Jumps to the previous global workspace editor.
--   `VSCode Harpoon: Delete Editor (vscode-harpoon.deleteEditor)` Removes the current editor
--   `VSCode Harpoon: Delete Global Editor (vscode-harpoon.deleteGlobalEditor)` Removes the current
+-   `VSCode Harpoon: Delete Editor (cursor-harpoon.deleteEditor)` Removes the current editor
+-   `VSCode Harpoon: Delete Global Editor (cursor-harpoon.deleteGlobalEditor)` Removes the current
     editor globally
--   `VSCode Harpoon: Clear All Editors (vscode-harpoon.clearEditors)` Removes all editors
--   `VSCode Harpoon: Clear All Global Editors (vscode-harpoon.clearGlobalEditors)` Removes all
+-   `VSCode Harpoon: Clear All Editors (cursor-harpoon.clearEditors)` Removes all editors
+-   `VSCode Harpoon: Clear All Global Editors (cursor-harpoon.clearGlobalEditors)` Removes all
     editors globally
 
 ### Available Contexts
 
--   `VSCode Harpoon: Quick Pick Visible (vscode-harpoon.isQuickPick)` Adds context for determining
+-   `VSCode Harpoon: Quick Pick Visible (cursor-harpoon.isQuickPick)` Adds context for determining
     whether harpoon's quick pick list is visible.
 
 ## Troubleshooting
@@ -86,19 +88,19 @@ However, for this to work you need to add a property to your settings.json:
 [
     {
         "key": "alt+a",
-        "commands": ["vscode-harpoon.addEditor"]
+        "commands": ["cursor-harpoon.addEditor"]
     },
     {
         "key": "alt+e",
-        "commands": ["vscode-harpoon.editEditors"]
+        "commands": ["cursor-harpoon.editEditors"]
     },
     {
         "key": "alt+p",
-        "commands": ["vscode-harpoon.editorQuickPick"]
+        "commands": ["cursor-harpoon.editorQuickPick"]
     },
     {
         "key": "alt+1",
-        "command": "vscode-harpoon.gotoEditor1"
+        "command": "cursor-harpoon.gotoEditor1"
     }
 ]
 ```
@@ -111,19 +113,19 @@ However, for this to work you need to add a property to your settings.json:
     "vim.normalModeKeyBindings": [
         {
             "before": ["<leader>", "a"],
-            "commands": ["vscode-harpoon.addEditor"]
+            "commands": ["cursor-harpoon.addEditor"]
         },
         {
             "before": ["<leader>", "e"],
-            "commands": ["vscode-harpoon.editEditors"]
+            "commands": ["cursor-harpoon.editEditors"]
         },
         {
             "before": ["<leader>", "p", "e"],
-            "commands": ["vscode-harpoon.editorQuickPick"]
+            "commands": ["cursor-harpoon.editorQuickPick"]
         },
         {
             "before": ["<leader>", "1"],
-            "commands": ["vscode-harpoon.gotoEditor1"]
+            "commands": ["cursor-harpoon.gotoEditor1"]
         }
     ]
 }
@@ -142,10 +144,10 @@ Any feedback is very appreciated!
 
 Please file an issue for bugs, missing documentation, unexpected behaviour etc.
 
-[**Create bug report**](https://github.com/tobias-z/vscode-harpoon/issues/new?assignees=&labels=&template=bug_report.md&title=)
+[**Create bug report**](https://github.com/przybylski/vscode-harpoon/issues/new?assignees=&labels=&template=bug_report.md&title=)
 
 ### 🕯 Feature Requests
 
 Please file an issue to suggest new features. Vote on feature requests by adding a 👍.
 
-[**Create Feature Requests**](https://github.com/tobias-z/vscode-harpoon/issues/new?assignees=&labels=&template=feature_request.md&title=)
+[**Create Feature Requests**](https://github.com/przybylski/vscode-harpoon/issues/new?assignees=&labels=&template=feature_request.md&title=)
