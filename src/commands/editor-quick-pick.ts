@@ -9,6 +9,7 @@ export default function createEditorQuickPickCommand(
 ) {
     return async () => {
         const quickPick = vscode.window.createQuickPick();
+        quickPick.title = "↼ Harpoon ⇀";
         workspaceService.setQuickPickContext(true);
 
         quickPick.items = activeProjectService.activeEditors.reduce((acc, editor, i) => {
