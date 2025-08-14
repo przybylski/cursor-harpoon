@@ -1,3 +1,14 @@
+## [1.8.0]
+
+-   Added workspace sessions feature (workspace-scoped named sessions)
+    -   Commands: `sessionCreate`, `sessionDelete`, `sessionRename`, `sessionSelect`,
+        `sessionQuickPick`
+    -   Editor Quick Pick title shows the current session when multiple sessions exist and the
+        current is not `default`
+    -   Sessions are listed in creation order (no sorting)
+    -   Creating a session creates an empty session (no editors); add editors afterwards
+    -   Selected session state is persisted and kept in sync with workspace state
+
 ## [1.7.0]
 
 -   Move to personal distribution.
