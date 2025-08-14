@@ -7,7 +7,7 @@ plugin for neovim. It supports the basic use case of file navigation just like w
 
 Forked from original work of ![Tobias Zimmermann](https://github.com/tobias-z/vscode-harpoon)
 
-![GitHub](https://img.shields.io/github/workflow/status/przybylski/vscode-harpoon/validate/main)
+![GitHub](https://img.shields.io/github/actions/workflow/status/przybylski/cursor-harpoon/validate.yml?branch=dev)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 </div>
