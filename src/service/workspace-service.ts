@@ -1,5 +1,6 @@
 import * as vscode from "vscode";
 import ActiveProjectService, { Editor } from "./active-project-service";
+import WorkspaceSessionService from "./workspace-session-service";
 import { getStateKey, State } from "../harpoon";
 
 export default class WorkspaceService {
@@ -8,7 +9,8 @@ export default class WorkspaceService {
     constructor(
         private readonly activeProjectService: ActiveProjectService,
         private readonly context: vscode.ExtensionContext,
-        private readonly state: State
+        private readonly state: State,
+        private readonly workspaceSessionService?: WorkspaceSessionService
     ) {
         this.stateKey = getStateKey(state);
     }
@@ -30,6 +32,10 @@ export default class WorkspaceService {
             activeEditors: this.activeProjectService.activeEditors,
             previousEditor: this.activeProjectService.getPreviousEditor(),
         });
+        // Keep the current session snapshot in sync (workspace only)
+        if (this.workspaceSessionService) {
+            void this.workspaceSessionService.saveCurrentIntoSelectedSession();
+        }
     }
 
     public setQuickPickContext(isQuickPick: boolean) {

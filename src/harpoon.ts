@@ -2,6 +2,7 @@
 import * as vscode from "vscode";
 import ActiveProjectService, { Editor } from "./service/active-project-service";
 import WorkspaceService from "./service/workspace-service";
+import WorkspaceSessionService from "./service/workspace-session-service";
 import CommandFactory from "./commands/command-factory";
 import { createGotoEditorCommand } from "./commands/goto-editor";
 import createAddEditorCommand from "./commands/add-editor";
@@ -11,6 +12,11 @@ import createGotoPreviousHarpoonEditorCommand from "./commands/goto-previous-har
 import createNavigateEditorCommand from "./commands/navigate-editor";
 import createDeleteEditorCommand from "./commands/delete-editor";
 import createClearEditorsCommand from "./commands/clear-editor";
+import createSessionCreateCommand from "./commands/session-create";
+import createSessionDeleteCommand from "./commands/session-delete";
+import createSessionRenameCommand from "./commands/session-rename";
+import createSessionSelectCommand from "./commands/session-select";
+import createSessionQuickPickCommand from "./commands/session-quick-pick";
 
 export type State = "workspaceState" | "globalState";
 
@@ -47,7 +53,17 @@ function registerCommands(
         prevState.activeEditors,
         prevState.previousEditor
     );
-    const workspaceService = new WorkspaceService(activeProjectService, context, state);
+    const workspaceSessionService = new WorkspaceSessionService(context, activeProjectService);
+    const workspaceService = new WorkspaceService(
+        activeProjectService,
+        context,
+        state,
+        state === "workspaceState" ? workspaceSessionService : undefined
+    );
+    if (state === "workspaceState") {
+        // Initialize default session and selection
+        workspaceSessionService.ensureInitialized();
+    }
     const gotoEditor = createGotoEditorCommand(workspaceService);
 
     const key = state === "globalState" ? "Global" : "";
@@ -78,10 +94,15 @@ function registerCommands(
     commandFactory.registerCommand(`goto${key}Editor7`, gotoEditor(7));
     commandFactory.registerCommand(`goto${key}Editor8`, gotoEditor(8));
     commandFactory.registerCommand(`goto${key}Editor9`, gotoEditor(9));
-    commandFactory.registerCommand(
-        `editor${key}QuickPick`,
-        createEditorQuickPickCommand(activeProjectService, workspaceService)
-    );
+    const editorQuickPickCommand =
+        state === "workspaceState"
+            ? createEditorQuickPickCommand(
+                  activeProjectService,
+                  workspaceService,
+                  workspaceSessionService
+              )
+            : createEditorQuickPickCommand(activeProjectService, workspaceService);
+    commandFactory.registerCommand(`editor${key}QuickPick`, editorQuickPickCommand);
     commandFactory.registerCommand(
         `gotoPrevious${key}HarpoonEditor`,
         createGotoPreviousHarpoonEditorCommand(activeProjectService, workspaceService)
@@ -96,4 +117,28 @@ function registerCommands(
     );
     commandFactory.registerCommand(`delete${key}Editor`, deleteEditor());
     commandFactory.registerCommand(`clear${key}Editors`, clearEditors());
+
+    // Session management (workspace-only)
+    if (state === "workspaceState") {
+        commandFactory.registerCommand(
+            "sessionCreate",
+            createSessionCreateCommand(workspaceSessionService)
+        );
+        commandFactory.registerCommand(
+            "sessionDelete",
+            createSessionDeleteCommand(workspaceSessionService)
+        );
+        commandFactory.registerCommand(
+            "sessionRename",
+            createSessionRenameCommand(workspaceSessionService)
+        );
+        commandFactory.registerCommand(
+            "sessionSelect",
+            createSessionSelectCommand(workspaceSessionService)
+        );
+        commandFactory.registerCommand(
+            "sessionQuickPick",
+            createSessionQuickPickCommand(workspaceSessionService)
+        );
+    }
 }

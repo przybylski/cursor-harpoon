@@ -52,7 +52,12 @@ type CommandName =
     | "deleteEditor"
     | "deleteGlobalEditor"
     | "clearEditors"
-    | "clearGlobalEditors";
+    | "clearGlobalEditors"
+    | "sessionCreate"
+    | "sessionDelete"
+    | "sessionRename"
+    | "sessionSelect"
+    | "sessionQuickPick";
 
 export default class CommandFactory {
     constructor(private readonly context: vscode.ExtensionContext) {}

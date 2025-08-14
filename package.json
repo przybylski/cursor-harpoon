@@ -31,211 +31,231 @@
         "commands": [
             {
                 "command": "cursor-harpoon.navigateNextEditor",
-                "title": "VSCode Harpoon: Navigate Next Editor"
+                "title": "Cursor Harpoon: Navigate Next Editor"
             },
             {
                 "command": "cursor-harpoon.navigatePreviousEditor",
-                "title": "VSCode Harpoon: Navigate Previous Editor"
+                "title": "Cursor Harpoon: Navigate Previous Editor"
             },
             {
                 "command": "cursor-harpoon.addEditor",
-                "title": "VSCode Harpoon: Add Editor"
+                "title": "Cursor Harpoon: Add Editor"
             },
             {
                 "command": "cursor-harpoon.editEditors",
-                "title": "VSCode Harpoon: Edit Editors"
+                "title": "Cursor Harpoon: Edit Editors"
             },
             {
                 "command": "cursor-harpoon.addEditor1",
-                "title": "VSCode Harpoon: Add Editor 1"
+                "title": "Cursor Harpoon: Add Editor 1"
             },
             {
                 "command": "cursor-harpoon.addEditor2",
-                "title": "VSCode Harpoon: Add Editor 2"
+                "title": "Cursor Harpoon: Add Editor 2"
             },
             {
                 "command": "cursor-harpoon.addEditor3",
-                "title": "VSCode Harpoon: Add Editor 3"
+                "title": "Cursor Harpoon: Add Editor 3"
             },
             {
                 "command": "cursor-harpoon.addEditor4",
-                "title": "VSCode Harpoon: Add Editor 4"
+                "title": "Cursor Harpoon: Add Editor 4"
             },
             {
                 "command": "cursor-harpoon.addEditor5",
-                "title": "VSCode Harpoon: Add Editor 5"
+                "title": "Cursor Harpoon: Add Editor 5"
             },
             {
                 "command": "cursor-harpoon.addEditor6",
-                "title": "VSCode Harpoon: Add Editor 6"
+                "title": "Cursor Harpoon: Add Editor 6"
             },
             {
                 "command": "cursor-harpoon.addEditor7",
-                "title": "VSCode Harpoon: Add Editor 7"
+                "title": "Cursor Harpoon: Add Editor 7"
             },
             {
                 "command": "cursor-harpoon.addEditor8",
-                "title": "VSCode Harpoon: Add Editor 8"
+                "title": "Cursor Harpoon: Add Editor 8"
             },
             {
                 "command": "cursor-harpoon.addEditor9",
-                "title": "VSCode Harpoon: Add Editor 9"
+                "title": "Cursor Harpoon: Add Editor 9"
             },
             {
                 "command": "cursor-harpoon.gotoEditor1",
-                "title": "VSCode Harpoon: Go to editor 1"
+                "title": "Cursor Harpoon: Go to editor 1"
             },
             {
                 "command": "cursor-harpoon.gotoEditor2",
-                "title": "VSCode Harpoon: Go to editor 2"
+                "title": "Cursor Harpoon: Go to editor 2"
             },
             {
                 "command": "cursor-harpoon.gotoEditor3",
-                "title": "VSCode Harpoon: Go to editor 3"
+                "title": "Cursor Harpoon: Go to editor 3"
             },
             {
                 "command": "cursor-harpoon.gotoEditor4",
-                "title": "VSCode Harpoon: Go to editor 4"
+                "title": "Cursor Harpoon: Go to editor 4"
             },
             {
                 "command": "cursor-harpoon.gotoEditor5",
-                "title": "VSCode Harpoon: Go to editor 5"
+                "title": "Cursor Harpoon: Go to editor 5"
             },
             {
                 "command": "cursor-harpoon.gotoEditor6",
-                "title": "VSCode Harpoon: Go to editor 6"
+                "title": "Cursor Harpoon: Go to editor 6"
             },
             {
                 "command": "cursor-harpoon.gotoEditor7",
-                "title": "VSCode Harpoon: Go to editor 7"
+                "title": "Cursor Harpoon: Go to editor 7"
             },
             {
                 "command": "cursor-harpoon.gotoEditor8",
-                "title": "VSCode Harpoon: Go to editor 8"
+                "title": "Cursor Harpoon: Go to editor 8"
             },
             {
                 "command": "cursor-harpoon.gotoEditor9",
-                "title": "VSCode Harpoon: Go to editor 9"
+                "title": "Cursor Harpoon: Go to editor 9"
             },
             {
                 "command": "cursor-harpoon.gotoPreviousHarpoonEditor",
-                "title": "VSCode Harpoon: Go to previous harpoon editor"
+                "title": "Cursor Harpoon: Go to previous harpoon editor"
             },
             {
                 "command": "cursor-harpoon.editorQuickPick",
-                "title": "VSCode Harpoon: Editor Quick Pick"
+                "title": "Cursor Harpoon: Editor Quick Pick"
             },
             {
                 "command": "cursor-harpoon.navigateGlobalNextEditor",
-                "title": "VSCode Harpoon: Navigate Next Global Editor"
+                "title": "Cursor Harpoon: Navigate Next Global Editor"
             },
             {
                 "command": "cursor-harpoon.navigateGlobalPreviousEditor",
-                "title": "VSCode Harpoon: Navigate Previous Global Editor"
+                "title": "Cursor Harpoon: Navigate Previous Global Editor"
             },
             {
                 "command": "cursor-harpoon.addGlobalEditor",
-                "title": "VSCode Harpoon: Add Global Editor"
+                "title": "Cursor Harpoon: Add Global Editor"
             },
             {
                 "command": "cursor-harpoon.editGlobalEditors",
-                "title": "VSCode Harpoon: Edit Global Editors"
+                "title": "Cursor Harpoon: Edit Global Editors"
             },
             {
                 "command": "cursor-harpoon.addGlobalEditor1",
-                "title": "VSCode Harpoon: Add Global Editor 1"
+                "title": "Cursor Harpoon: Add Global Editor 1"
             },
             {
                 "command": "cursor-harpoon.addGlobalEditor2",
-                "title": "VSCode Harpoon: Add Global Editor 2"
+                "title": "Cursor Harpoon: Add Global Editor 2"
             },
             {
                 "command": "cursor-harpoon.addGlobalEditor3",
-                "title": "VSCode Harpoon: Add Global Editor 3"
+                "title": "Cursor Harpoon: Add Global Editor 3"
             },
             {
                 "command": "cursor-harpoon.addGlobalEditor4",
-                "title": "VSCode Harpoon: Add Global Editor 4"
+                "title": "Cursor Harpoon: Add Global Editor 4"
             },
             {
                 "command": "cursor-harpoon.addGlobalEditor5",
-                "title": "VSCode Harpoon: Add Global Editor 5"
+                "title": "Cursor Harpoon: Add Global Editor 5"
             },
             {
                 "command": "cursor-harpoon.addGlobalEditor6",
-                "title": "VSCode Harpoon: Add Global Editor 6"
+                "title": "Cursor Harpoon: Add Global Editor 6"
             },
             {
                 "command": "cursor-harpoon.addGlobalEditor7",
-                "title": "VSCode Harpoon: Add Global Editor 7"
+                "title": "Cursor Harpoon: Add Global Editor 7"
             },
             {
                 "command": "cursor-harpoon.addGlobalEditor8",
-                "title": "VSCode Harpoon: Add Global Editor 8"
+                "title": "Cursor Harpoon: Add Global Editor 8"
             },
             {
                 "command": "cursor-harpoon.addGlobalEditor9",
-                "title": "VSCode Harpoon: Add Global Editor 9"
+                "title": "Cursor Harpoon: Add Global Editor 9"
             },
             {
                 "command": "cursor-harpoon.gotoGlobalEditor1",
-                "title": "VSCode Harpoon: Go to global editor 1"
+                "title": "Cursor Harpoon: Go to global editor 1"
             },
             {
                 "command": "cursor-harpoon.gotoGlobalEditor2",
-                "title": "VSCode Harpoon: Go to global editor 2"
+                "title": "Cursor Harpoon: Go to global editor 2"
             },
             {
                 "command": "cursor-harpoon.gotoGlobalEditor3",
-                "title": "VSCode Harpoon: Go to global editor 3"
+                "title": "Cursor Harpoon: Go to global editor 3"
             },
             {
                 "command": "cursor-harpoon.gotoGlobalEditor4",
-                "title": "VSCode Harpoon: Go to global editor 4"
+                "title": "Cursor Harpoon: Go to global editor 4"
             },
             {
                 "command": "cursor-harpoon.gotoGlobalEditor5",
-                "title": "VSCode Harpoon: Go to global editor 5"
+                "title": "Cursor Harpoon: Go to global editor 5"
             },
             {
                 "command": "cursor-harpoon.gotoGlobalEditor6",
-                "title": "VSCode Harpoon: Go to global editor 6"
+                "title": "Cursor Harpoon: Go to global editor 6"
             },
             {
                 "command": "cursor-harpoon.gotoGlobalEditor7",
-                "title": "VSCode Harpoon: Go to global editor 7"
+                "title": "Cursor Harpoon: Go to global editor 7"
             },
             {
                 "command": "cursor-harpoon.gotoGlobalEditor8",
-                "title": "VSCode Harpoon: Go to global editor 8"
+                "title": "Cursor Harpoon: Go to global editor 8"
             },
             {
                 "command": "cursor-harpoon.gotoGlobalEditor9",
-                "title": "VSCode Harpoon: Go to global editor 9"
+                "title": "Cursor Harpoon: Go to global editor 9"
             },
             {
                 "command": "cursor-harpoon.editorGlobalQuickPick",
-                "title": "VSCode Harpoon: Editor Global Quick Pick"
+                "title": "Cursor Harpoon: Editor Global Quick Pick"
             },
             {
                 "command": "cursor-harpoon.gotoPreviousGlobalHarpoonEditor",
-                "title": "VSCode Harpoon: Go to previous global harpoon editor"
+                "title": "Cursor Harpoon: Go to previous global harpoon editor"
             },
             {
                 "command": "cursor-harpoon.deleteEditor",
-                "title": "VSCode Harpoon: Delete Editor"
+                "title": "Cursor Harpoon: Delete Editor"
             },
             {
                 "command": "cursor-harpoon.deleteGlobalEditor",
-                "title": "VSCode Harpoon: Delete Global Editor"
+                "title": "Cursor Harpoon: Delete Global Editor"
             },
             {
                 "command": "cursor-harpoon.clearEditors",
-                "title": "VSCode Harpoon: Clear All Editors"
+                "title": "Cursor Harpoon: Clear All Editors"
             },
             {
                 "command": "cursor-harpoon.clearGlobalEditors",
-                "title": "VSCode Harpoon: Clear All Global Editors"
+                "title": "Cursor Harpoon: Clear All Global Editors"
+            },
+            {
+                "command": "cursor-harpoon.sessionCreate",
+                "title": "Cursor Harpoon: Session Create"
+            },
+            {
+                "command": "cursor-harpoon.sessionDelete",
+                "title": "Cursor Harpoon: Session Delete"
+            },
+            {
+                "command": "cursor-harpoon.sessionRename",
+                "title": "Cursor Harpoon: Session Rename"
+            },
+            {
+                "command": "cursor-harpoon.sessionSelect",
+                "title": "Cursor Harpoon: Session Select"
+            },
+            {
+                "command": "cursor-harpoon.sessionQuickPick",
+                "title": "Cursor Harpoon: Session Quick Pick"
             }
         ]
     },
@@ -256,12 +276,14 @@
     },
     "devDependencies": {
         "@types/glob": "^7.2.0",
+        "@types/minimatch": "^6.0.0",
         "@types/mocha": "^9.1.0",
         "@types/node": "14.x",
         "@types/vscode": "^1.65.0",
         "@typescript-eslint/eslint-plugin": "^5.12.1",
         "@typescript-eslint/parser": "^5.12.1",
         "@vscode/test-electron": "^2.1.2",
+        "@vscode/vsce": "^2.18.0",
         "eslint": "^8.9.0",
         "glob": "^7.2.0",
         "husky": "^7.0.4",
@@ -270,7 +292,6 @@
         "prettier": "^2.5.1",
         "ts-loader": "^9.2.6",
         "typescript": "^4.5.5",
-        "@vscode/vsce": "^2.18.0",
         "webpack": "^5.69.1",
         "webpack-cli": "^4.9.2"
     },

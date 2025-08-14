@@ -23,6 +23,11 @@ You are then able to jump to `editor 1` or `editor 2` from anywhere in your work
 
 ![Navigation Example](images/navigation.gif)
 
+### Workspace Sessions
+
+Cursor Harpoon supports multiple named sessions within a single workspace. A session captures your
+list of marked editors.
+
 ### Available Commands
 
 -   `Cursor Harpoon: Add Editor (cursor-harpoon.addEditor)` adds the current editor to your
@@ -63,6 +68,14 @@ You are then able to jump to `editor 1` or `editor 2` from anywhere in your work
 -   `Cursor Harpoon: Clear All Editors (cursor-harpoon.clearEditors)` Removes all editors
 -   `Cursor Harpoon: Clear All Global Editors (cursor-harpoon.clearGlobalEditors)` Removes all
     editors globally
+-   `Cursor Harpoon: Session Create (cursor-harpoon.sessionCreate)` Create or overwrite a named
+    workspace session with an empty editor list
+-   `Cursor Harpoon: Session Delete (cursor-harpoon.sessionDelete)` Delete a named workspace session
+-   `Cursor Harpoon: Session Rename (cursor-harpoon.sessionRename)` Rename a workspace session
+-   `Cursor Harpoon: Session Select (cursor-harpoon.sessionSelect)` Activate a session for this
+    workspace
+-   `Cursor Harpoon: Session Quick Pick (cursor-harpoon.sessionQuickPick)` Quick pick of sessions
+    (with delete button)
 
 ### Available Contexts
 

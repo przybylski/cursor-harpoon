@@ -1,15 +1,24 @@
 import * as vscode from "vscode";
 import ActiveProjectService, { Editor } from "../service/active-project-service";
 import WorkspaceService from "../service/workspace-service";
+import WorkspaceSessionService from "../service/workspace-session-service";
 import { getSlash } from "../util/system";
 
 export default function createEditorQuickPickCommand(
     activeProjectService: ActiveProjectService,
-    workspaceService: WorkspaceService
+    workspaceService: WorkspaceService,
+    workspaceSessionService?: WorkspaceSessionService
 ) {
     return async () => {
         const quickPick = vscode.window.createQuickPick();
-        quickPick.title = "↼ Harpoon ⇀";
+        const currentSession = workspaceSessionService?.getCurrentSessionName();
+        const allSessions = workspaceSessionService?.listSessions() ?? [];
+        const shouldShowSessionName = Boolean(
+            currentSession &&
+                currentSession !== WorkspaceSessionService.defaultSessionName &&
+                allSessions.length > 1
+        );
+        quickPick.title = shouldShowSessionName ? `↼ Harpoon (${currentSession}) ⇀` : "↼ Harpoon ⇀";
         workspaceService.setQuickPickContext(true);
 
         quickPick.items = activeProjectService.activeEditors.reduce((acc, editor, i) => {
